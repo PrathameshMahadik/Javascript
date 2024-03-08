@@ -7,8 +7,7 @@ for (let i = 1; i <= arrInput.length; i++) {
   if (arrInput[i] === arrInput[i - 1]) {
     count++;
   } else {
-    result += arrInput[i - 1];
-    result += count;
+    result += arrInput[i - 1]+count;
     count = 1;
   }
 }

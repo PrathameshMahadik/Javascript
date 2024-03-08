@@ -5,8 +5,7 @@ let arrInput = input.split(" ");
 output += arrInput[0].toString();
 for (let i = 1; i < arrInput.length; i++) {
   let str = arrInput[i].toString();
-  let ch = str.charAt(0);
-  ch = ch.toUpperCase();
+  let ch = str.charAt(0).toUpperCase;
   str = str.replace(str.charAt(0), ch);
   output += str;
 }
