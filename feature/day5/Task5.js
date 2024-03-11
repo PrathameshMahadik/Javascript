@@ -11,8 +11,7 @@ const obj = {
   b: { c: 2, d: [3, 4] },
 };
 let parent = "";
-let res = {};
-function flattenObj(obj, parent, res) {
+function flattenObj(obj, parent, res = {}) {
   for (key in obj) {
     let propName = parent ? parent + "." + key : key;
     if (typeof obj[key] == "object") {
@@ -23,5 +22,4 @@ function flattenObj(obj, parent, res) {
   }
   return res;
 }
-flattenObj(obj, parent, (res = {}));
-console.log(res);
+console.log(flattenObj(obj, parent));
