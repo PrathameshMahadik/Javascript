@@ -1,12 +1,18 @@
 // 8. Create a function that fetches data from multiple APIs in parallel and then performs
 // some operation on the combined data, using async/await.
 const giveRes = (p1, p2, p3) => {
-  Promise.all([p1, p2, p3]).then((values) => console.log(values));
+  Promise.all([p1, p2, p3])
+    .then((values) => console.log(values))
+    .catch((err) => console.log(err));
 };
 const fetchData1 = async (url, heads) => {
-  let response = await fetch(url, { headers: heads });
-  let data = await response.json();
-  return data;
+  try {
+    let response = await fetch(url, { headers: heads });
+    let data = response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 };
 const url1 = "https://currency-exchange.p.rapidapi.com/listquotes";
 const headers1 = {
@@ -28,7 +34,9 @@ const headers3 = {
 };
 let p3 = fetchData1(url1, headers1);
 
-Promise.all([p1, p2, p3]).then(async function (values) {
-  values["Value"] = "Value added...";
-  console.log(values);
-});
+Promise.all([p1, p2, p3])
+  .then(async function (values) {
+    values["Value"] = "Value added...";
+    console.log(values);
+  })
+  .catch((err) => console.log(err));

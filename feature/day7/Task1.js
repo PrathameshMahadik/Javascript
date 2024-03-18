@@ -13,5 +13,6 @@ const fetchPromise = fetch(
 );
 fetchPromise
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => console.log(data))
+  .catch((err)=>console.log(err));
 console.log("End");
