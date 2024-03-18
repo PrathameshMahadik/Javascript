@@ -29,7 +29,7 @@ const headers3 = {
 const p3 = fetchData1(url1, headers1);
 const giveRes = (p1, p2, p3) => {
   Promise.all([p1, p2, p3])
-  .then(async function (values) {
+  .then(function (values) {
     values["Value"] = "Value added...";
     console.log(values);
   })
