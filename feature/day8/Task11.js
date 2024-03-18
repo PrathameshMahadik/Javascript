@@ -6,7 +6,7 @@ promise.then(function(data) {
 }, function(error) {
    console.log(error);
 });*/
-let promise = new Promise(function (resolve, reject) {
+const promise = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve("Data received");
   }, 1000);
