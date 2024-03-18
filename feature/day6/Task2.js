@@ -8,13 +8,13 @@ class shape {
 }
 class Rectangle extends shape {
   getArea(width, height) {
-    let area = width * height;
+    const area = width * height;
     return area;
   }
 }
 class Triangle extends shape {
   getArea(width, height) {
-    let area = (width * height) / 2;
+    const area = (width * height) / 2;
     return area;
   }
 }
