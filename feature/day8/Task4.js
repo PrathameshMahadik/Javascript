@@ -10,7 +10,7 @@ if (myNumber) {
 } else {
    console.log('The value is not a number');
 }*/
-let myString = "100 hello world";
+const myString = "100 hello world";
 if (myString.length > 0) {
   console.log("The length of the string is: " + myString.length);
 } else {

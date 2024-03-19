@@ -12,5 +12,5 @@ function Person(name, age) {
 Person.prototype.getDetails = function () {
   console.log(this.name + " is " + this.age + " years old");
 };
-let person = new Person("John Doe", 30);
+const person = new Person("John Doe", 30);
 person.getDetails();

@@ -8,11 +8,11 @@ if (myNumber) {
 } else {
    console.log('The number is undefined');
 }*/
-let myArray = [1, 2, 3, 4];
+const myArray = [1, 2, 3, 4];
 for (let i = 0; i < myArray.length; i++) {
   console.log(myArray[i]);
 }
-let myNumber = myArray[3];
+const myNumber = myArray[3];
 if (myNumber) {
   console.log("The number is: " + myNumber);
 } else {
