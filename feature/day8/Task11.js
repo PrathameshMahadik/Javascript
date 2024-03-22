@@ -11,10 +11,4 @@ const promise = new Promise(function (resolve, reject) {
     resolve("Data received");
   }, 1000);
 });
-promise
-  .then(function (data) {
-    console.log(data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+promise.then((data) => console.log(data)).catch((error) => console.log(error));
