@@ -16,7 +16,7 @@ if (myString.length > 0) {
 } else {
   console.log("The string is empty");
 }
-let myNumber = parseInt(myString);
+const myNumber = parseInt(myString);
 if (myNumber) {
   console.log("The number is: " + myNumber);
 } else {
